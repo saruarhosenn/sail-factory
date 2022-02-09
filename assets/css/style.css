@@ -418,7 +418,8 @@ nav .main-menu ul li .sub-menu li a {
 	color: var(--primary-color);
 }
 
-nav .main-menu>ul>li>a::after {
+nav .main-menu>ul>li>a::after,
+nav .main-menu>ul>li> .menu-link a:first-child:after {
 	content: '';
 	position: absolute;
 	top: .6rem;
@@ -426,6 +427,10 @@ nav .main-menu>ul>li>a::after {
 	width: 2px;
 	height: 50%;
 	background-color: var(--secondary-color);
+}
+
+nav .main-menu>ul>li> .menu-link a:first-child:after {
+    right: -1.7rem;
 }
 
 nav .main-menu>ul>li:nth-child(6)>a::after,
@@ -476,8 +481,19 @@ Sticky Menu
 }
 
 .sticky-menu nav .main-menu>ul>li>a,
-.sticky-menu nav .main-menu>ul>li> .menu-link > a {
+.sticky-menu nav .main-menu>ul>li> .menu-link a:first-child {
 	color: var(--primary-color);
+}
+
+.sticky-menu nav .main-menu>ul>li>a::after,
+.sticky-menu nav .main-menu>ul>li> .menu-link a:first-child::after {
+	background-color: var(--primary-color);
+}
+
+.sticky-menu nav .main-menu>ul>li:nth-child(6)>a::after,
+.sticky-menu nav .main-menu>ul>li:nth-child(7)>a::after,
+.sticky-menu nav .main-menu>ul>li:nth-child(8)>a::after {
+	background-color: transparent;
 }
 
 

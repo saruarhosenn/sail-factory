@@ -1,4 +1,3 @@
-
 /*
 =========================================
 Responsive Breakpoint
@@ -140,8 +139,8 @@ Responsive Breakpoint
 		display: -ms-flexbox;
 		display: flex;
 		-webkit-box-pack: justify;
-		    -ms-flex-pack: justify;
-		        justify-content: space-between;
+		-ms-flex-pack: justify;
+		justify-content: space-between;
 	}
 
 	.contact-list-text-2 p:nth-child(2) {
@@ -640,7 +639,10 @@ Responsive Breakpoint
 		font-size: var(--size-sm);
 	}
 
-	nav .main-menu>ul>li>a::after {
+	nav .main-menu>ul>li>a::after,
+	nav .main-menu>ul>li>.menu-link a:first-child:after,
+	.sticky-menu nav .main-menu>ul>li>a::after,
+	.sticky-menu nav .main-menu>ul>li>.menu-link a:first-child:after {
 		background-color: transparent;
 	}
 
@@ -650,7 +652,7 @@ Responsive Breakpoint
 		visibility: visible;
 		width: 100%;
 		-webkit-box-shadow: 0 0 0 0;
-		        box-shadow: 0 0 0 0;
+		box-shadow: 0 0 0 0;
 		display: none;
 		padding: 0rem 2rem;
 	}
@@ -659,6 +661,17 @@ Responsive Breakpoint
 		display: inline-block;
 		width: 3rem;
 		height: 3rem;
+	}
+
+	.sub-menu-icon::after,
+	.sub-menu-icon::before {
+		content: "";
+		position: absolute;
+		top: 50%;
+		left: 50%;
+		width: 1.5rem;
+		height: 2px;
+		background-color: var(--primary-color);
 	}
 
 	.sub-menu-icon::after {
@@ -675,18 +688,7 @@ Responsive Breakpoint
 		-moz-transform: translate(-50%, -50%) rotate(90deg);
 		-ms-transform: translate(-50%, -50%) rotate(90deg);
 		-o-transform: translate(-50%, -50%) rotate(90deg);
-	}
-
-	.sub-menu-icon::after,
-	.sub-menu-icon::before {
-		content: "";
-		position: absolute;
-		top: 50%;
-		left: 50%;
-		width: 1.5rem;
-		height: 2px;
-		background-color: var(--primary-color);
-	}
+}
 
 	.sticky-menu .main-menu ul li .sub-menu {
 		border-top: none;
@@ -1056,7 +1058,7 @@ Responsive Breakpoint
 	.nieuwe-zeilen-img img {
 		height: 40rem;
 		-o-object-fit: cover;
-		   object-fit: cover;
+		object-fit: cover;
 	}
 
 	.price-row {
@@ -1085,7 +1087,7 @@ Responsive Breakpoint
 	.spinnakers-en-gennakers-page-img img {
 		height: 40rem;
 		-o-object-fit: cover;
-		   object-fit: cover;
+		object-fit: cover;
 	}
 
 	.u-bepaalt-wrapper {
@@ -1124,7 +1126,7 @@ Responsive Breakpoint
 	.over-ons-img img {
 		height: 40rem;
 		-o-object-fit: cover;
-		   object-fit: cover;
+		object-fit: cover;
 	}
 
 	/* 
@@ -1156,14 +1158,14 @@ Responsive Breakpoint
 	.contact-img img {
 		height: 40rem;
 		-o-object-fit: cover;
-		   object-fit: cover;
+		object-fit: cover;
 	}
 
 	.contact-list {
 		-webkit-box-orient: vertical;
 		-webkit-box-direction: normal;
-		    -ms-flex-direction: column;
-		        flex-direction: column;
+		-ms-flex-direction: column;
+		flex-direction: column;
 	}
 
 }
