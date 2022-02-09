@@ -1,0 +1,1298 @@
+
+/*
+--------------------------------------------
+--------------------------------------------
+  Theme Name: .
+  Author: .
+  Description: .
+  Version: 1.0.0
+--------------------------------------------
+--------------------------------------------
+*/
+
+/* 
+=====================================
+Variables
+=====================================
+*/
+:root {
+	--size-xxl: 6.4rem;
+	--size-xl: 4.5rem;
+	--size-lg: 3rem;
+	--size-md: 1.8rem;
+	--size-sm: 1.6rem;
+	--btn-size: 1.9rem;
+	--primary-color: #354147;
+	--secondary-color: #FFFFFF;
+	--color-third: #01799D;
+	--color-four: #FBD784;
+	--color--five: #017A9C;
+	--heading-color: #0B1D26;
+	--body-color: #0C1E27;
+	--line-color: #087D9E;
+	--bg-color: #EFEFEF;
+}
+
+/* 
+=====================================
+Variables
+=====================================
+*/
+
+html {
+	font-size: 62.5%;
+	-webkit-font-smoothing: antialiased;
+	-moz-osx-font-smoothing: grayscale;
+	text-rendering: optimizeLegibility;
+	scroll-behavior: smooth;
+	overflow-x: hidden;
+}
+
+body {
+	font-family: 'Roboto-400';
+	background-color: var(--body-color);
+	font-size: var(--size-sm);
+	line-height: 1.5;
+	overflow-x: hidden;
+}
+
+/* 
+==================================
+Bacic Setup
+==================================
+*/
+*,
+*::after,
+*::before {
+	margin: 0;
+	padding: 0;
+	-webkit-box-sizing: border-box;
+	box-sizing: border-box;
+}
+
+::-moz-selection {
+	background-color: var(--body-color);
+	color: var(--secondary-color);
+}
+
+::selection {
+	background-color: var(--body-color);
+	color: var(--secondary-color);
+}
+
+::-webkit-scrollbar {
+	width: .9rem;
+}
+
+::-webkit-scrollbar-track {
+	background-color: var(--primary-color);
+}
+
+::-webkit-scrollbar-thumb {
+	background-color: var(--color--five);
+	height: 6rem;
+}
+
+a,
+span,
+label {
+	display: inline-block;
+}
+
+ul li {
+	list-style: none
+}
+
+a,
+a:focus {
+	font-family: 'Roboto-400';
+	text-decoration: none;
+}
+
+button:focus,
+input:focus,
+textarea:focus,
+button,
+input,
+textarea {
+	outline: 0;
+	border: 0;
+	background-color: transparent;
+}
+
+button {
+	cursor: pointer;
+}
+
+h1,
+h2,
+h3,
+h4,
+h5,
+h6,
+p,
+ol,
+ul,
+hr {
+	margin: 0;
+	padding: 0;
+}
+
+hr {
+	opacity: 1;
+	background-color: transparent;
+}
+
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+	font-family: 'Roboto-700';
+	color: var(--primary-color);
+}
+
+p {
+	font-family: 'Roboto-400';
+	font-size: var(--size-sm);
+	color: var(--primary-color);
+	line-height: 2.4rem;
+}
+
+.transition-linear {
+	-webkit-transition: all 0.4s linear;
+	-o-transition: all 0.4s linear;
+	transition: all 0.4s linear;
+}
+
+a,
+button,
+img,
+.transition-ease-in-out {
+	-webkit-transition: all 0.3s ease-in-out;
+	-o-transition: all 0.3s ease-in-out;
+	transition: all 0.3s ease-in-out;
+}
+
+/* 
+================================================
+================================================
+Start All Pages Reuseble Components
+================================================
+*/
+.banner {
+	background: no-repeat top / cover;
+	min-height: 66rem;
+}
+
+.wrapper-row {
+	margin-right: -7.5rem;
+	margin-left: -7.5rem;
+}
+
+.wrapper-row>* {
+	padding-right: 7.5rem;
+	padding-left: 7.5rem;
+}
+
+.title-xxl {
+	font-size: var(--size-xxl);
+	line-height: 8.7rem;
+}
+
+.title-xl {
+	font-size: var(--size-xl);
+	line-height: 6.6rem;
+}
+
+.title-xxl,
+.title-xl,
+.title-lg {
+	font-family: 'Prata-400';
+	color: var(--heading-color);
+}
+
+.title-lg {
+	font-size: var(--size-lg);
+	line-height: 4.3rem;
+	color: var(--color-five);
+}
+
+.title-md {
+	font-size: 2.4rem;
+	color: var(--primary-color);
+	line-height: 2.8rem;
+}
+
+.title-sm {
+	font-family: 'Roboto-900';
+	font-size: var(--size-md);
+	color: var(--color-third);
+	line-height: 3.5rem;
+	letter-spacing: .6rem;
+	text-transform: uppercase;
+}
+
+.line-text hr {
+	vertical-align: middle;
+	width: 7.2rem;
+	border-bottom: 2px solid var(--line-color);
+	margin-right: 3rem;
+	margin-top: 1.7rem;
+}
+
+.btn-bg {
+	width: 100%;
+	max-width: 32.3rem;
+	height: 6rem;
+	line-height: 6rem;
+	font-family: 'Roboto-700';
+	color: var(--secondary-color);
+	font-size: var(--btn-size);
+	text-align: center;
+	border-radius: 5px;
+	background-color: var(--color-third);
+	-webkit-border-radius: 5px;
+	-moz-border-radius: 5px;
+	-ms-border-radius: 5px;
+	-o-border-radius: 5px;
+}
+
+.btn-bg:hover {
+	background-color: var(--body-color);
+	color: var(--secondary-color);
+}
+
+.btn-hover-bg:hover {
+	background-color: var(--secondary-color);
+	color: var(--primary-color);
+}
+
+.btn-border {
+	border: 1px solid #EAE9F2;
+	color: var(--secondary-color);
+	font-size: 2.1rem;
+}
+
+.btn-border:hover {
+	background-color: var(--secondary-color);
+	color: var(--primary-color);
+}
+
+.text-link:hover .arrow-img {
+	margin-left: 1rem;
+}
+
+/* Form Style */
+.form-section {
+	background-color: var(--bg-color);
+}
+
+.form-wrapper {
+	max-width: 102.4rem;
+}
+
+.form-box :is(label, textarea, input, textarea::-webkit-input-placeholder, input::-webkit-input-placeholder) {
+	font-family: 'Mulish-700';
+	font-size: var(--size-sm);
+	color: #11142D;
+}
+
+.form-box :is(label, textarea, input, textarea::-moz-placeholder, input::-moz-placeholder) {
+	font-family: 'Mulish-700';
+	font-size: var(--size-sm);
+	color: #11142D;
+}
+
+.form-box :is(label, textarea, input, textarea:-ms-input-placeholder, input:-ms-input-placeholder) {
+	font-family: 'Mulish-700';
+	font-size: var(--size-sm);
+	color: #11142D;
+}
+
+.form-box :is(label, textarea, input, textarea::-ms-input-placeholder, input::-ms-input-placeholder) {
+	font-family: 'Mulish-700';
+	font-size: var(--size-sm);
+	color: #11142D;
+}
+
+.form-box :is(label, textarea, input, textarea::placeholder, input::placeholder) {
+	font-family: 'Mulish-700';
+	font-size: var(--size-sm);
+	color: #11142D;
+}
+
+.form-box :is(textarea, input) {
+	width: 100%;
+	display: block;
+	background-color: var(--secondary-color);
+	height: 5.5rem;
+	padding: 1.5rem;
+	border: 2px solid transparent;
+}
+
+.form-box :is(textarea:focus, input:focus) {
+	border-color: var(--color--five);
+}
+
+.form-box textarea {
+	height: 20.8rem;
+}
+
+/* 
+================================================
+End All Pages Reuseble Components
+================================================
+================================================
+*/
+
+
+/* 
+=============================
+Start Header Section
+=============================
+*/
+header {
+	position: fixed;
+	top: 0;
+	left: 0;
+	width: 100%;
+	padding-top: 4.8rem;
+	padding-bottom: 4.8rem;
+	padding-left: 8.1rem;
+	padding-right: 8.1rem;
+	z-index: 999;
+}
+
+nav .logo img {
+	max-width: 30rem;
+}
+
+nav .main-menu ul li {
+	position: relative;
+}
+
+nav .main-menu ul li a {
+	position: relative;
+	font-family: 'Roboto-700';
+	color: var(--secondary-color);
+	font-size: var(--size-md);
+}
+
+nav .main-menu ul li .sub-menu {
+	opacity: 0;
+	visibility: hidden;
+	width: 16.5rem;
+	position: absolute;
+	top: 160%;
+	left: 0;
+	background-color: var(--secondary-color);
+	padding: 2.5rem;
+	-webkit-box-shadow: rgba(0, 0, 0, 0.1) 0px 20px 25px -5px, rgba(0, 0, 0, 0.04) 0px 10px 10px -5px;
+	        box-shadow: rgba(0, 0, 0, 0.1) 0px 20px 25px -5px, rgba(0, 0, 0, 0.04) 0px 10px 10px -5px;
+	border-radius: 0 0 1rem 1rem;
+	-webkit-border-radius: 0 0 1rem 1rem;
+	-moz-border-radius: 0 0 1rem 1rem;
+	-ms-border-radius: 0 0 1rem 1rem;
+	-o-border-radius: 0 0 1rem 1rem;
+	transition: all 0.3s linear;
+	-webkit-transition: all 0.3s linear;
+	-moz-transition: all 0.3s linear;
+	-ms-transition: all 0.3s linear;
+	-o-transition: all 0.3s linear;
+}
+
+nav .main-menu ul li .sub-menu li:not(:last-child) {
+	margin-bottom: 1.3rem;
+}
+
+nav .main-menu ul li:hover .sub-menu {
+	top: 115%;
+	opacity: 1;
+	visibility: visible;
+}
+
+nav .main-menu ul li .sub-menu li a {
+	font-family: 'Roboto-400';
+	color: var(--primary-color);
+}
+
+nav .main-menu>ul>li>a::after {
+	content: '';
+	position: absolute;
+	top: .6rem;
+	right: -2.1rem;
+	width: 2px;
+	height: 50%;
+	background-color: var(--secondary-color);
+}
+
+nav .main-menu>ul>li:nth-child(6)>a::after,
+nav .main-menu>ul>li:nth-child(7)>a::after,
+nav .main-menu>ul>li:nth-child(8)>a::after {
+	background-color: transparent;
+}
+
+
+/*
+-------------------------
+Menu Btn & Close Icon
+-------------------------
+*/
+.menu-show-btn {
+	position: relative;
+	cursor: pointer;
+}
+
+.menu-show-btn>* {
+	width: 3.5rem;
+	height: .3rem;
+	background: var(--secondary-color);
+	margin: .6rem 0;
+}
+
+.menu-close-icon {
+	position: absolute;
+	top: 3rem;
+	right: 3rem;
+	width: 2.5rem;
+}
+
+/*
+----------------
+Sticky Menu
+----------------
+*/
+.sticky-menu {
+	padding-top: 2rem;
+	padding-bottom: 2rem;
+	background-color: var(--secondary-color);
+	border-bottom: 4px solid var(--color--five);
+}
+
+.sticky-menu .menu-show-btn>* {
+	background: var(--primary-color);
+}
+
+.sticky-menu nav .main-menu>ul>li>a,
+.sticky-menu nav .main-menu>ul>li> .menu-link > a {
+	color: var(--primary-color);
+}
+
+
+.sticky-menu nav :is(.logo img, .whatsapp, .email) {
+	filter: invert(21%) sepia(5%) saturate(1620%) hue-rotate(155deg) brightness(10%) contrast(89%);
+	-webkit-filter: invert(21%) sepia(5%) saturate(1620%) hue-rotate(155deg) brightness(10%) contrast(89%);
+}
+
+.sticky-menu .main-menu ul li .sub-menu {
+	border-top: .4rem solid var(--color--five);
+}
+
+/* 
+=============================
+End Header Section
+=============================
+*/
+
+
+/* 
+============================================================================
+============================================================================
+Start Home Page Style
+============================================================================
+============================================================================
+*/
+
+/* Hero Section */
+.home-hero-section {
+	background: url("../images/home-page/hero-bg.png") no-repeat top / cover;
+	min-height: 100vh;
+}
+
+.home-hero-section::after,
+.home-hero-section::before {
+	content: "";
+	clear: both;
+	display: block;
+	overflow: hidden;
+}
+
+.hero-text {
+	margin-top: 28rem;
+}
+
+.hero-text h5 {
+	color: var(--color-four);
+}
+
+.hero-text p {
+	font-family: 'Prata-400';
+	font-size: 8rem;
+	line-height: 10rem;
+	color: var(--secondary-color);
+}
+
+/* Scherpe Prijzen Section */
+.scherpe-prijzen-section {
+	padding-bottom: 48.5rem;
+}
+
+.scherpe-prijzen-row {
+	margin-right: -3rem;
+	margin-left: -3rem;
+}
+
+.scherpe-prijzen-row>* {
+	padding-right: 3rem;
+	padding-left: 3rem;
+}
+
+.scherpe-prijzen-left-text {
+	background-color: var(--secondary-color);
+	min-height: 20.2rem;
+	border-radius: 1rem;
+	-webkit-border-radius: 1rem;
+	-moz-border-radius: 1rem;
+	-ms-border-radius: 1rem;
+	-o-border-radius: 1rem;
+}
+
+.scherpe-prijzen-left-text h4 {
+	color: #19191B;
+}
+
+.scherpe-prijzen-left-text p {
+	color: #696871;
+}
+
+.scherpe-prijzen-right-text h3 {
+	color: var(--secondary-color);
+}
+
+.scherpe-prijzen-right-text p {
+	color: rgba(255, 255, 255, 0.702469);
+}
+
+/* Home Nieuwe Neilen Section */
+.home-nieuwe-zeilen-section {
+	min-height: 43rem;
+	background-color: var(--secondary-color);
+}
+
+.home-nieuwe-zeilen-wrapper {
+	width: 100%;
+	background-color: var(--secondary-color);
+	position: relative;
+	position: absolute;
+	top: -26.6rem;
+	left: 0;
+	padding-bottom: 15.6rem;
+}
+
+.home-nieuwe-zeilen-content {
+	max-width: 55rem;
+}
+
+.home-nieuwe-zeilen-content a {
+	max-width: 36.3rem;
+}
+
+.home-nieuwe-zeilen-img {
+	position: absolute;
+	bottom: 0;
+	right: 0;
+	max-width: 56.6rem;
+}
+
+/* Sail Factory Section */
+.sailf-actory-section {
+	background-color: var(--bg-color);
+}
+
+.sailf-actory-wrapper {
+	max-width: 93.7rem;
+}
+
+/* Gennakers Spinnakers Section */
+.gennakers-spinnakers-section {
+	background-color: var(--secondary-color);
+}
+
+.gennakers-spinnakers-wrapper {
+	max-width: 126.3rem;
+	margin-left: auto;
+	margin-right: auto;
+}
+
+.gennakers-spinnakers-row {
+	margin-right: -7.5rem;
+	margin-left: -7.5rem;
+}
+
+.gennakers-spinnakers-row>* {
+	padding-right: 7.5rem;
+	padding-left: 7.5rem;
+}
+
+/* Onze Zeilen Section */
+.onze-zeilen-wrapper {
+	max-width: 115.5rem;
+}
+
+.onze-zeilen-title p {
+	color: var(--secondary-color);
+}
+
+.onze-zeilen-title h5 {
+	color: var(--color-four);
+}
+
+.onze-zeilen-slider {
+	overflow-x: hidden;
+}
+
+.onze-zeilen-content {
+	background-color: var(--secondary-color);
+	border-radius: 1rem;
+	-webkit-border-radius: 1rem;
+	-moz-border-radius: 1rem;
+	-ms-border-radius: 1rem;
+	-o-border-radius: 1rem;
+}
+
+.onze-zeilen-content a {
+	color: var(--color--five);
+}
+
+.swiper-pagination-button span {
+	cursor: pointer;
+	width: 1.7rem;
+	height: .8rem;
+	background-color: var(--secondary-color);
+	opacity: 1;
+	border-radius: 3rem;
+	-webkit-border-radius: 3rem;
+	-moz-border-radius: 3rem;
+	-ms-border-radius: 3rem;
+	-o-border-radius: 3rem;
+}
+
+.swiper-pagination-button .swiper-pagination-bullet-active {
+	width: 4.5rem;
+	background-color: var(--color--five);
+}
+
+/* Benieuwd Section */
+.benieuwd-section {
+	background-color: var(--secondary-color);
+}
+
+.benieuwd-wrapper {
+	max-width: 93.7rem;
+}
+
+/* 
+============================================================================
+============================================================================
+End Home Page Style
+============================================================================
+============================================================================
+*/
+
+
+/* 
+============================================================================
+============================================================================
+Start Nieuwe Zeilen Page Style
+============================================================================
+============================================================================
+*/
+/*===============================*/
+/* Start Reuseble Components */
+.nieuwe-zeilen-page-wrapper {
+	max-width: 115.7rem;
+	margin: auto;
+}
+
+.cruising-race-peformance-row {
+	margin-right: -3rem;
+	margin-left: -3rem;
+}
+
+.cruising-race-peformance-row>* {
+	padding-right: 3rem;
+	padding-left: 3rem;
+}
+
+
+.benieuwd-title {
+	color: var(--secondary-color);
+}
+
+.box-shadow {
+	-webkit-box-shadow: rgba(100, 100, 111, 0.2) 0px 7px 29px 0px;
+	        box-shadow: rgba(100, 100, 111, 0.2) 0px 7px 29px 0px;
+}
+
+/* Start Reuseble Components */
+/*==============================*/
+
+/* Hero Section */
+.nieuwe-zeilen-banner {
+	background-image: url("../images/nieuwe-zeilen/hero-bg.jpg");
+}
+
+/* Nieuwe Zeilen */
+.nieuwe-zeilen-section {
+	min-height: 23.5rem;
+	background-color: var(--secondary-color);
+}
+
+.nieuwe-zeilen-wrapper {
+	width: 100%;
+	background-color: var(--secondary-color);
+	position: absolute;
+	top: -43.6rem;
+	left: 0;
+	padding: 16rem 15.4rem 10rem;
+}
+
+/* Box Section*/
+.box-section {
+	background-color: var(--bg-color);
+}
+
+.box-row {
+	margin-right: -3.5rem;
+	margin-left: -3.5rem;
+}
+
+.box-row>* {
+	padding-right: 3.5rem;
+	padding-left: 3.5rem;
+}
+
+/* Text bg Section */
+.text-bg-section {
+	background: url("../images/nieuwe-zeilen/text-bg.jpg") no-repeat center / cover;
+	background-color: rgba(12, 30, 39, 0.6);
+	background-blend-mode: overlay;
+	padding: 12.5rem 0;
+}
+
+.text-bg-text {
+	max-width: 92.5rem;
+}
+
+.text-bg-text p {
+	color: var(--secondary-color);
+}
+
+/* Cruising Section */
+.cruising-section {
+	background-color: var(--secondary-color);
+}
+
+.clearfix {
+	overflow: hidden;
+}
+
+.price-row {
+	background-color: var(--bg-color);
+	margin-left: -6rem;
+	margin-right: -6rem;
+}
+
+.price-row>* {
+	padding-left: 6rem;
+	padding-right: 6rem;
+}
+
+.price-title p {
+	color: var(--color--five);
+}
+
+.price-box-1 {
+	min-height: 30.3rem;
+}
+
+.price-box-2 {
+	min-height: 33rem;
+}
+
+.price-box-3 {
+	min-height: 37.2rem;
+}
+
+.price-box-4 {
+	min-height: 35.9rem;
+}
+
+.price-box {
+	background-color: var(--secondary-color);
+	border-radius: 1rem;
+	-webkit-border-radius: 1rem;
+	-moz-border-radius: 1rem;
+	-ms-border-radius: 1rem;
+	-o-border-radius: 1rem;
+}
+
+.price-box h5 {
+	font-family: 'Roboto-700';
+	font-size: 2rem;
+	line-height: 3.2rem;
+	color: var(--primary-color);
+}
+
+.price-box ul li {
+	list-style: disc;
+}
+
+.price-box ul li:not(:last-child) {
+	margin-bottom: .5rem;
+}
+
+.price-box p {
+	margin-top: 3rem;
+	font-family: 'Roboto-300';
+	font-size: var(--size-xl);
+	color: var(--color--five);
+}
+
+/* Benieuwd Naar Section */
+.benieuwd-naar-wrapper {
+	max-width: 88.3rem;
+}
+
+/* Benieuwd Wat Section */
+.benieuwd-wat-wrapper {
+	max-width: 109.3rem;
+}
+
+/* Peformance Section */
+.peformance-section {
+	background-color: var(--secondary-color);
+}
+
+/* Race Section */
+.race-section {
+	background-color: var(--secondary-color);
+}
+
+/* benieuwd-naar-onze-section */
+.benieuwd-naar-onze-wrapper {
+	max-width: 115.7rem;
+}
+
+/* Gennakers Spinnakers Code Section */
+.gennakers-spinnakers-code-section {
+	background-color: var(--secondary-color);
+}
+
+/* Weten Welke Section */
+.weten-welke-section {
+	background-color: var(--bg-color);
+}
+
+.weten-welke-content {
+	max-width: 110.9rem;
+}
+
+/* 
+============================================================================
+============================================================================
+End Nieuwe Zeilen Page Style
+============================================================================
+============================================================================
+*/
+
+
+/* 
+============================================================================
+============================================================================
+Start Spinnakers En Gennakers Page Style
+============================================================================
+============================================================================
+*/
+/* Start Reuseble Components */
+.spinnakers-wrapper {
+	max-width: 116.2rem;
+	margin-left: auto;
+	margin-right: auto;
+}
+
+.gennakers-row {
+	margin-right: -3rem;
+	margin-left: -3rem;
+}
+
+.gennakers-row>* {
+	padding-right: 3rem;
+	padding-left: 3rem;
+}
+
+/* End Reuseble Components */
+
+/* Hero Section */
+.spinnakers-en-gennakers-page-banner {
+	background-image: url("../images/gennakers-spinnakers-page/hero-bg.jpg");
+}
+
+/* Start Spinnakers En Gennakers Ppage Section  */
+.spinnakers-en-gennakers-page-section {
+	min-height: 49.5rem;
+	background-color: var(--secondary-color);
+}
+
+.spinnakers-en-gennakers-page-wrapper {
+	width: 100%;
+	background-color: var(--secondary-color);
+	position: absolute;
+	top: -43.6rem;
+	left: 0;
+	padding: 16rem 15.4rem 8rem;
+}
+
+/* U Bepaalt Section */
+.u-bepaalt-section {
+	background-color: var(--secondary-color);
+}
+
+.u-bepaalt-wrapper {
+	background-color: var(--bg-color);
+}
+
+.u-bepaalt-color-box {
+	display: -ms-grid;
+	display: grid;
+	-ms-grid-columns: 1fr 3rem 1fr 3rem 1fr 3rem 1fr 3rem 1fr 3rem 1fr 3rem 1fr;
+	grid-template-columns: repeat(7, 1fr);
+	grid-gap: 3rem;
+}
+
+.u-bepaalt-color-box-content p {
+	font-size: 1.3rem;
+}
+
+/* Laagste Prijs Section */
+.laagste-prijs {
+	padding-top: 15.5rem;
+}
+
+.laagste-prijs-wrapper {
+	max-width: 96.6rem;
+}
+
+.laagste-prijs-left-content {
+	background-color: var(--secondary-color);
+	border-radius: 1rem;
+	-webkit-border-radius: 1rem;
+	-moz-border-radius: 1rem;
+	-ms-border-radius: 1rem;
+	-o-border-radius: 1rem;
+}
+
+.laagste-prijs-left-content-2 {
+	margin-top: -5.5rem;
+}
+
+.laagste-prijs-left-content :is(h3, p:nth-child(3)) {
+	color: var(--color--five);
+}
+
+.laagste-prijs-left-content p:nth-child(3) {
+	font-size: var(--size-xl);
+}
+
+.laagste-prijs-right-content p {
+	color: var(--secondary-color);
+}
+
+/* Code Zero Section */
+.code-zero-section,
+.code-zero-box-section,
+.code-zero-content-box {
+	background-color: var(--secondary-color);
+}
+
+
+/* Code Zero Box Section */
+.code-zero-box-wrapper {
+	background-color: var(--bg-color);
+}
+
+.code-zero-content-box {
+	border-radius: 1rem;
+	min-height: 36.5rem;
+	-webkit-border-radius: 1rem;
+	-moz-border-radius: 1rem;
+	-ms-border-radius: 1rem;
+	-o-border-radius: 1rem;
+}
+
+.code-zero-content h3 {
+	color: var(--color--five);
+}
+
+/* Nieuw Section */
+.nieuw-text {
+	max-width: 77.4rem;
+}
+
+.nieuw-text p {
+	color: var(--secondary-color);
+}
+
+/* Benieuwd Onze Section */
+.benieuwd-onze-section {
+	background-color: var(--secondary-color);
+}
+
+.benieuwd-onze-text {
+	max-width: 88.3rem;
+}
+
+/* 
+============================================================================
+============================================================================
+End Spinnakers En Gennakers Page Style
+============================================================================
+============================================================================
+*/
+
+
+/* 
+============================================================================
+============================================================================
+Start Over Ons Page Style
+============================================================================
+============================================================================
+*/
+/* Hero Section */
+.over-ons-banner {
+	background-image: url("../images/over-ons-page/hero-bg.jpg");
+}
+
+/* Over Ons Section */
+.over-ons-section {
+	min-height: 43.5rem;
+	background-color: var(--secondary-color);
+}
+
+.over-ons-wrapper {
+	width: 100%;
+	background-color: var(--secondary-color);
+	position: absolute;
+	top: -43.6rem;
+	left: 0;
+	padding: 16rem 15.4rem 11rem;
+}
+
+/* 
+============================================================================
+============================================================================
+End Over Ons Page Style
+============================================================================
+============================================================================
+*/
+
+
+/* 
+============================================================================
+============================================================================
+Start Offert Page Style
+============================================================================
+============================================================================
+*/
+/* Hero Section */
+.offerte-banner {
+	background-image: url("../images/offerte-page/hero-bg.jpg");
+}
+
+/* Offerte Section */
+.offerte-wrapper {
+	width: 100%;
+	background-color: var(--bg-color);
+	position: absolute;
+	top: -42.6rem;
+	left: 0;
+	padding: 16rem 10rem 6rem;
+}
+
+/* 
+============================================================================
+============================================================================
+End Offert Page Style
+============================================================================
+============================================================================
+*/
+
+
+/* 
+============================================================================
+============================================================================
+Start Contact Page Style
+============================================================================
+============================================================================
+*/
+/* Hero Section */
+.contact-banner {
+	background-image: url("../images/contact-page/hero-bg.jpg");
+}
+
+/* Contact Section */
+.contact-section {
+	background-color: var(--secondary-color);
+	min-height: 50.5rem;
+}
+
+.contact-wrapper {
+	width: 100%;
+	background-color: var(--secondary-color);
+	position: absolute;
+	top: -43.6rem;
+	left: 0;
+	padding: 16rem 15.4rem 10rem;
+}
+
+.contact-list li img {
+	width: 2.5rem;
+}
+
+.contact-list-text {
+	margin-left: 2.3rem;
+}
+
+/* 
+============================================================================
+============================================================================
+End Contact Page Style
+============================================================================
+============================================================================
+*/
+
+
+/* 
+===================================
+Footer Section
+===================================
+*/
+.footer-row {
+	margin-right: -3rem;
+	margin-left: -3rem;
+}
+
+.footer-row>* {
+	padding-right: 3rem;
+	padding-left: 3rem;
+}
+
+.footer-widget h4 {
+	color: var(--color-four);
+	margin-bottom: 2.5rem;
+}
+
+.footer-logo-text {
+	max-width: 33.7rem;
+}
+
+.footer-text,
+.pages-link li a {
+	color: var(--secondary-color);
+	font-size: var(--size-sm);
+}
+
+.pages-link li a {
+	text-decoration: underline;
+}
+
+.pages-link li a:hover {
+	text-decoration: none;
+	margin-left: .3rem;
+}
+
+.copyright-text :is(span, a) {
+	color: var(--secondary-color);
+	font-size: var(--size-md);
+}
+
+/* 
+===================================
+Footer Section
+===================================
+*/
+
+
+/* 
+===============================
+Back to top Btn
+===============================
+*/
+#scroll-up-btn {
+	opacity: 0;
+	position: fixed;
+	bottom: 3rem;
+	right: 3rem;
+	z-index: 99;
+	background: var(--color--five);
+	width: 4.5rem;
+	height: 4.5rem;
+	-webkit-animation: myBtn 3.5s infinite linear;
+	animation: myBtn 3.5s infinite linear
+}
+
+@-webkit-keyframes myBtn {
+	0% {
+		right: 3rem;
+		bottom: 4rem;
+	}
+
+	25% {
+		bottom: 2rem;
+		right: 3rem;
+	}
+
+	50% {
+		right: 3rem;
+		bottom: 4rem;
+	}
+
+	75% {
+		bottom: 2rem;
+		right: 3rem;
+	}
+
+	100% {
+		right: 3rem;
+		bottom: 4rem;
+	}
+}
+
+@keyframes myBtn {
+	0% {
+		right: 3rem;
+		bottom: 4rem;
+	}
+
+	25% {
+		bottom: 2rem;
+		right: 3rem;
+	}
+
+	50% {
+		right: 3rem;
+		bottom: 4rem;
+	}
+
+	75% {
+		bottom: 2rem;
+		right: 3rem;
+	}
+
+	100% {
+		right: 3rem;
+		bottom: 4rem;
+	}
+}
